@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Régua - Cadastro</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+<body> 
+     
+    <img class="logo" src="assets/img/LogoNaRegua.png" alt="">
+    <form class="central-form" data-form action="">
+        <h2 class="register-tittle">Cadastro</h2>
+        <span class="register-type">Informações pessoais</span>
+        <div class="input-line half-size-inputs">
+            <div class="input-space name-input-space">
+                <label class="input-label" for="nameInput">Nome</label>
+                <input type="text" name="name" id="nameInput" minlength="4" required>
+                <span class="error-msg">Campo inválido</span>
+            </div>
+            <div class="input-space password-input-space">
+                <label class="input-label" for="passwordInput">Senha</label>
+                <input type="password" name="password" id="passwordInput" required pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$">
+                <span class="error-msg">Campo inválido</span>
+            </div>
+        </div>
+        <div class="input-line full-size-inputs">
+            <label class="input-label" for="emailInput">E-mail</label>
+            <input type="email" name="email" id="emailInput" required minlength="8">
+            <span class="error-msg">Campo inválido</span>
+        </div>
+        <div class="input-line half-size-inputs">
+            <div class="input-space">
+                <label class="date-label" for="dateInput">Nascimento</label>
+                <input type="date" name="date" id="dateInput" data-inputtype="birthDate" required>
+                <span class="error-msg">Campo inválido</span>
+            </div>
+            <div class="input-space">
+                <label class="input-label" for="CPFInput">CPF</label>
+                <input type="text" name="CPF" id="CPFInput" required pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}">
+                <span class="error-msg">Campo inválido</span>
+            </div>
+        </div>
+        <span class="register-type">Endereço</span>
+        <div class="input-line half-size-inputs">
+            <div class="input-space-cep">
+                <label class="input-label" for="CEPInput">CEP</label>
+                <input type="text" class="cep-input" name="CEP" id="cep" minlength="8" maxlength="9" required >
+                <span class="error-msg">Campo inválido</span>
+            </div>
+            <div class="input-space-city">
+                <label class="input-label" for="cityInput">Cidade</label>
+                <input type="text" class="city-input" name="city" id="localidade" disabled required>
+                <span class="error-msg">Campo inválido</span>
+            </div>
+        </div>
+        <div class="input-line half-size-inputs">
+            <div class="input-space-street">
+                <label class="input-label" for="streetInput">Logradouro</label>
+                <input type="text" class="street-input" name="street" id="logradouro" disabled required>
+                <span class="error-msg">Campo inválido</span>
+            </div>
+            <div class="input-space-state">
+                <label class="state-label" for="stateInput">Estado</label>
+                <select required name="state"class="state-input"data-type="state_input"id="uf" disabled required>
+                    <optgroup>
+                        <option value="">--</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                </select>
+                <span class="error-msg">Campo inválido</span>
+            </div>
+        </div>
+        <div class="submit-btn-line">
+            <button class="submit-btn" type="submit">cadastrar</button>
+        </div>
+    </form>
+    
+    <footer> <a href="https://github.com/amaralltx">amarall.tx</a></footer>
+    <script src="script/label-animation.js"></script>
+    <script src="script/app.js" type="module"></script>
+</body>
+</html>
